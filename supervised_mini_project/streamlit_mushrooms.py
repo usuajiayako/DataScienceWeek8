@@ -61,7 +61,7 @@ gill_spacing = st.sidebar.selectbox("Gill spacing", ["close", "crowded"])
 gill_size = st.sidebar.selectbox("Gill size", ["broad", "narrow"])
 gill_color = st.sidebar.selectbox("Gill color", ["black", "brown", "buff", "chocolate", "gray", "green", "orange", "pink", "purple", "red", "white", "yellow"])
 stalk_shape = st.sidebar.selectbox("Stalk shape", ["enlarging", "tapering"])
-stalk_root = st.sidebar.selectbox("Stalk root", ["bulbous", "club", "cup", "equal", "rhizomorphs", "rooted", "missing"])
+stalk_root = st.sidebar.selectbox("Stalk root", ["bulbous", "club", "equal", "rooted", "missing"])
 stalk_surface_above_ring = st.sidebar.selectbox("Stalk surface above ring", ["fibrous", "scaly", "silky", "smooth"])
 stalk_surface_below_ring = st.sidebar.selectbox("Stalk surface below ring", ["fibrous", "scaly", "silky", "smooth"])
 stalk_color_above_ring = st.sidebar.selectbox("Stalk color above ring", ["brown", "buff", "cinnamon", "gray", "orange", "pink", "red", "white", "yellow"])
@@ -147,6 +147,51 @@ if gill_color == "purple": test_data["gill-color_u"] = 1
 if gill_color == "red": test_data["gill-color_e"] = 1
 if gill_color == "white": test_data["gill-color_w"] = 1
 if gill_color == "yellow": test_data["gill-color_y"] = 1
+
+# stalk_shape 
+if stalk_shape == "enlarging": test_data["stalk-shape_e"] = 1
+if stalk_shape == "tapering": test_data["stalk-shape_t"] = 1
+
+# stalk_root
+if stalk_root == "bulbous": test_data["stalk-root_b"] = 1
+if stalk_root == "club": test_data["stalk-root_c"] = 1
+if stalk_root == "equal": test_data["stalk-root_e"] = 1
+if stalk_root == "rooted": test_data["stalk-root_r"] = 1
+if stalk_root == "missing": test_data["stalk-root_?"] = 1
+
+# stalk_surface_above_ring
+if stalk_surface_above_ring == "fibrous": test_data["stalk-surface-above-ring_f"] = 1
+if stalk_surface_above_ring == "scaly": test_data["stalk-surface-above-ring_y"] = 1
+if stalk_surface_above_ring == "silky": test_data["stalk-surface-above-ring_k"] = 1
+if stalk_surface_above_ring == "smooth": test_data["stalk-surface-above-ring_s"] = 1
+
+# stalk_surface_below_ring
+if stalk_surface_below_ring == "fibrous": test_data["stalk-surface-below-ring_f"] = 1
+if stalk_surface_below_ring == "scaly": test_data["stalk-surface-below-ring_y"] = 1
+if stalk_surface_below_ring == "silky": test_data["stalk-surface-below-ring_k"] = 1
+if stalk_surface_below_ring == "smooth": test_data["stalk-surface-below-ring_s"] = 1
+
+# stalk_color_above_ring
+if stalk_color_above_ring == "brown": test_data["stalk-color-above-ring_n"] = 1
+if stalk_color_above_ring == "buff": test_data["stalk-color-above-ring_b"] = 1
+if stalk_color_above_ring == "cinnamon": test_data["stalk-color-above-ring_c"] = 1
+if stalk_color_above_ring == "gray": test_data["stalk-color-above-ring_g"] = 1
+if stalk_color_above_ring == "orange": test_data["stalk-color-above-ring_o"] = 1
+if stalk_color_above_ring == "pink": test_data["stalk-color-above-ring_p"] = 1
+if stalk_color_above_ring == "red": test_data["stalk-color-above-ring_e"] = 1
+if stalk_color_above_ring == "white": test_data["stalk-color-above-ring_w"] = 1
+if stalk_color_above_ring == "yellow": test_data["stalk-color-above-ring_y"] = 1
+
+# stalk_color_below_ring
+if stalk_color_below_ring == "brown": test_data["stalk-color-below-ring_n"] = 1
+if stalk_color_below_ring == "buff": test_data["stalk-color-below-ring_b"] = 1
+if stalk_color_below_ring == "cinnamon": test_data["stalk-color-below-ring_c"] = 1
+if stalk_color_below_ring == "gray": test_data["stalk-color-below-ring_g"] = 1
+if stalk_color_below_ring == "orange": test_data["stalk-color-below-ring_o"] = 1
+if stalk_color_below_ring == "pink": test_data["stalk-color-below-ring_p"] = 1
+if stalk_color_below_ring == "red": test_data["stalk-color-below-ring_e"] = 1
+if stalk_color_below_ring == "white": test_data["stalk-color-below-ring_w"] = 1
+if stalk_color_below_ring == "yellow": test_data["stalk-color-below-ring_y"] = 1
 
 st.write(test_data)
 st.write(result[0])
