@@ -69,7 +69,7 @@ stalk_color_below_ring = st.sidebar.selectbox("Stalk color below ring", ["brown"
 veil_type = st.sidebar.selectbox("Veil type", ["partial"])
 veil_color = st.sidebar.selectbox("Veil color", ["brown", "orange", "white", "yellow"])
 ring_number = st.sidebar.selectbox("Ring number", ["none", "one", "two"])
-ring_type = st.sidebar.selectbox("Ring type", ["cobwebby", "evanescent", "flaring", "large", "none", "pendant", "sheathing", "zone"])
+ring_type = st.sidebar.selectbox("Ring type", ["evanescent", "flaring", "large", "none", "pendant"])
 spore_print_color = st.sidebar.selectbox("Spore print color", ["black", "brown", "buff", "chocolate", "green", "orange", "purple", "white", "yellow"])
 population = st.sidebar.selectbox("Population", ["abundant", "clustered", "numerous", "scattered", "several", "solitary"])
 habitat = st.sidebar.selectbox("Habitat", ["grasses", "leaves", "meadows", "paths", "urban", "waste", "woods"])
@@ -202,6 +202,45 @@ if veil_color == "orange": test_data["veil-color_o"] = 1
 if veil_color == "white": test_data["veil-color_w"] = 1
 if veil_color == "yellow": test_data["veil-color_y"] = 1
 
+# ring_number
+if ring_number == "none": test_data["ring-number_n"] = 1
+if ring_number == "one": test_data["ring-number_o"] = 1
+if ring_number == "two": test_data["ring-number_t"] = 1
+
+# ring_type
+if ring_type == "evanescent": test_data["ring-type_e"] = 1
+if ring_type == "flaring": test_data["ring-type_f"] = 1
+if ring_type == "large": test_data["ring-type_l"] = 1
+if ring_type == "none": test_data["ring-type_n"] = 1
+if ring_type == "pendant": test_data["ring-type_p"] = 1
+
+# spore-print-color
+if spore_print_color == "black": test_data["spore-print-color_k"] = 1
+if spore_print_color == "brown": test_data["spore-print-color_n"] = 1
+if spore_print_color == "buff": test_data["spore-print-color_b"] = 1
+if spore_print_color == "chocolate": test_data["spore-print-color_h"] = 1
+if spore_print_color == "green": test_data["spore-print-color_r"] = 1
+if spore_print_color == "orange": test_data["spore-print-color_o"] = 1
+if spore_print_color == "purple": test_data["spore-print-color_u"] = 1
+if spore_print_color == "white": test_data["spore-print-color_w"] = 1
+if spore_print_color == "yellow": test_data["spore-print-color_y"] = 1
+
+# population
+if population == "abundant": test_data["population_a"] = 1
+if population == "clustered": test_data["population_c"] = 1
+if population == "numerous": test_data["population_n"] = 1
+if population == "scattered": test_data["population_s"] = 1
+if population == "several": test_data["population_v"] = 1
+if population == "solitary": test_data["population_y"] = 1
+
+# habitat
+if habitat == "grasses": test_data["habitat_g"] = 1
+if habitat == "leaves": test_data["habitat_l"] = 1
+if habitat == "meadows": test_data["habitat_m"] = 1
+if habitat == "paths": test_data["habitat_p"] = 1
+if habitat == "urban": test_data["habitat_u"] = 1
+if habitat == "waste": test_data["habitat_w"] = 1
+if habitat == "woods": test_data["habitat_d"] = 1
 
 st.write(test_data)
 st.write(result[0])
