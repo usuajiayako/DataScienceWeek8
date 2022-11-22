@@ -95,7 +95,17 @@ if cap_surface == "grooves": test_data["cap-surface_g"] = 1
 if cap_surface == "scaly": test_data["cap-surface_y"] = 1
 if cap_surface == "smooth": test_data["cap-surface_s"] = 1
 
-
+# cap_color
+if cap_color == "brown": test_data["cap-color_n"] = 1
+if cap_color == "buff": test_data["cap-color_b"] = 1
+if cap_color == "cinnamon": test_data["cap-color_c"] = 1
+if cap_color == "gray": test_data["cap-color_g"] = 1
+if cap_color == "green": test_data["cap-color_r"] = 1
+if cap_color == "pink": test_data["cap-color_p"] = 1
+if cap_color == "purple": test_data["cap-color_u"] = 1
+if cap_color == "red": test_data["cap-color_e"] = 1
+if cap_color == "white": test_data["cap-color_w"] = 1
+if cap_color == "yellow": test_data["cap-color_y"] = 1
 
 
 st.write(test_data)
