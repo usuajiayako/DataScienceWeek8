@@ -50,6 +50,7 @@ def main():
     st.image("mushroom.png")
 main()
 
+# sidebar
 cap_shape = st.sidebar.selectbox("Cap shape", ["bell", "conical", "convex", "flat", "knobbed", "sunken"])
 cap_surface = st.sidebar.selectbox("Cap surface", ["fibrous", "grooves", "scaly", "smooth"])
 cap_color = st.sidebar.selectbox("Cap color", ["brown", "buff", "cinnamon", "gray" , "green", "pink", "purple", "red", "white", "yellow"])
@@ -80,9 +81,13 @@ test_data = pd.DataFrame(columns = new_data.columns, index = ["Test data"])
 test_data = test_data.fillna(0)
 
 # Filling the result
-if cap_shape == "bell":
-    test_data["cap-shape_b"] = 1
-elif
+# cap_shape
+if cap_shape == "bell": test_data["cap-shape_b"] = 1
+if cap_shape == "conical": test_data["cap-shape_c"] = 1
+if cap_shape == "convex": test_data["cap-shape_x"] = 1
+if cap_shape == "flat": test_data["cap-shape_f"] = 1
+if cap_shape == "knobbed": test_data["cap-shape_k"] = 1
+if cap_shape == "sunken": test_data["cap-shape_s"] = 1
 
 
 
