@@ -46,7 +46,7 @@ import streamlit as st
 
 def main():
     st.title("Mushroom Edibility Test")
-    st.sidebar.title("Feature/Category Selection")
+    st.sidebar.title("Mushroom description")
     st.image("mushroom.png")
 main()
 
@@ -242,7 +242,15 @@ if habitat == "urban": test_data["habitat_u"] = 1
 if habitat == "waste": test_data["habitat_w"] = 1
 if habitat == "woods": test_data["habitat_d"] = 1
 
-st.write(test_data)
-st.write(result[0])
+# test botton
+if st.button("TEST!!"):
+    prediction = model.predict(test_data.iloc[:, 1:])
+    if prediction[0] == 1:
+        st.write("Edible!!")
+    else:
+        st.write("Poisonous!!")
 
 
+
+
+# %%
