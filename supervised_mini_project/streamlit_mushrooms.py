@@ -89,7 +89,11 @@ if cap_shape == "flat": test_data["cap-shape_f"] = 1
 if cap_shape == "knobbed": test_data["cap-shape_k"] = 1
 if cap_shape == "sunken": test_data["cap-shape_s"] = 1
 
-
+# cap_surface
+if cap_surface == "fibrous": test_data["cap-surface_f"] = 1
+if cap_surface == "grooves": test_data["cap-surface_g"] = 1
+if cap_surface == "scaly": test_data["cap-surface_y"] = 1
+if cap_surface == "smooth": test_data["cap-surface_s"] = 1
 
 
 
