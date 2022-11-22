@@ -56,10 +56,10 @@ cap_surface = st.sidebar.selectbox("Cap surface", ["fibrous", "grooves", "scaly"
 cap_color = st.sidebar.selectbox("Cap color", ["brown", "buff", "cinnamon", "gray" , "green", "pink", "purple", "red", "white", "yellow"])
 bruises = st.sidebar.selectbox("Bruises", ["yes", "no"]) 
 odor = st.sidebar.selectbox("Odor", ["almond", "anise", "creosote", "fishy", "foul", "musty", "none", "pungent", "spicy"])
-gill_attachment = st.sidebar.selectbox("Gill attachment", ["attached", "descending", "free", "notched"])
-gill_spacing = st.sidebar.selectbox("Gill spacing", ["close", "crowded", "distant"])
+gill_attachment = st.sidebar.selectbox("Gill attachment", ["attached", "free"])
+gill_spacing = st.sidebar.selectbox("Gill spacing", ["close", "crowded"])
 gill_size = st.sidebar.selectbox("Gill size", ["broad", "narrow"])
-gill_color = st.sidebar.selectbox("Gill_color", ["black", "brown", "buff", "chocolate", "gray", "green", "orange", "pink", "purple", "red", "white", "yellow"])
+gill_color = st.sidebar.selectbox("Gill color", ["black", "brown", "buff", "chocolate", "gray", "green", "orange", "pink", "purple", "red", "white", "yellow"])
 stalk_shape = st.sidebar.selectbox("Stalk shape", ["enlarging", "tapering"])
 stalk_root = st.sidebar.selectbox("Stalk root", ["bulbous", "club", "cup", "equal", "rhizomorphs", "rooted", "missing"])
 stalk_surface_above_ring = st.sidebar.selectbox("Stalk surface above ring", ["fibrous", "scaly", "silky", "smooth"])
@@ -121,6 +121,32 @@ if odor == "musty": test_data["odor_m"] = 1
 if odor == "none": test_data["odor_n"] = 1
 if odor == "pungent": test_data["odor_p"] = 1
 if odor == "spicy": test_data["odor_s"] = 1
+
+# gill_attachment
+if gill_attachment == "attached": test_data["gill-attachment_a"] = 1
+if gill_attachment == "free": test_data["gill-attachment_f"] = 1
+
+# gill_spacing
+if gill_spacing == "close": test_data["gill-spacing_c"] = 1
+if gill_spacing == "crowded": test_data["gill-spacing_w"] = 1
+
+# gill_size
+if gill_size == "broad": test_data["gill-size_b"] = 1
+if gill_size == "narrow": test_data["gill-size_n"] = 1
+
+# gill_color
+if gill_color == "black": test_data["gill-color_k"] = 1
+if gill_color == "brown": test_data["gill-color_n"] = 1
+if gill_color == "buff": test_data["gill-color_b"] = 1
+if gill_color == "chocolate": test_data["gill-color_h"] = 1
+if gill_color == "gray": test_data["gill-color_g"] = 1
+if gill_color == "green": test_data["gill-color_r"] = 1
+if gill_color == "orange": test_data["gill-color_o"] = 1
+if gill_color == "pink": test_data["gill-color_p"] = 1
+if gill_color == "purple": test_data["gill-color_u"] = 1
+if gill_color == "red": test_data["gill-color_e"] = 1
+if gill_color == "white": test_data["gill-color_w"] = 1
+if gill_color == "yellow": test_data["gill-color_y"] = 1
 
 st.write(test_data)
 st.write(result[0])
