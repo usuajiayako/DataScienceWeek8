@@ -107,6 +107,9 @@ if cap_color == "red": test_data["cap-color_e"] = 1
 if cap_color == "white": test_data["cap-color_w"] = 1
 if cap_color == "yellow": test_data["cap-color_y"] = 1
 
+# bruises
+if bruises == "yes": test_data["bruises_t"] = 1
+if bruises == "no": test_data["bruises_f"] = 1
 
 st.write(test_data)
 st.write(result[0])
