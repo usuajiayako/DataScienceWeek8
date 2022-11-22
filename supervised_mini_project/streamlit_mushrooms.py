@@ -111,6 +111,17 @@ if cap_color == "yellow": test_data["cap-color_y"] = 1
 if bruises == "yes": test_data["bruises_t"] = 1
 if bruises == "no": test_data["bruises_f"] = 1
 
+# odor
+if odor == "almond": test_data["odor_a"] = 1
+if odor == "anise": test_data["odor_l"] = 1
+if odor == "creosote": test_data["odor_c"] = 1
+if odor == "fishy": test_data["odor_y"] = 1
+if odor == "foul": test_data["odor_f"] = 1
+if odor == "musty": test_data["odor_m"] = 1
+if odor == "none": test_data["odor_n"] = 1
+if odor == "pungent": test_data["odor_p"] = 1
+if odor == "spicy": test_data["odor_s"] = 1
+
 st.write(test_data)
 st.write(result[0])
 
