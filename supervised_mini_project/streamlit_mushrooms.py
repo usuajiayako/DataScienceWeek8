@@ -66,7 +66,7 @@ stalk_surface_above_ring = st.sidebar.selectbox("Stalk surface above ring", ["fi
 stalk_surface_below_ring = st.sidebar.selectbox("Stalk surface below ring", ["fibrous", "scaly", "silky", "smooth"])
 stalk_color_above_ring = st.sidebar.selectbox("Stalk color above ring", ["brown", "buff", "cinnamon", "gray", "orange", "pink", "red", "white", "yellow"])
 stalk_color_below_ring = st.sidebar.selectbox("Stalk color below ring", ["brown", "buff", "cinnamon", "gray", "orange", "pink", "red", "white", "yellow"])
-veil_type = st.sidebar.selectbox("Veil type", ["partial", "universal"])
+veil_type = st.sidebar.selectbox("Veil type", ["partial"])
 veil_color = st.sidebar.selectbox("Veil color", ["brown", "orange", "white", "yellow"])
 ring_number = st.sidebar.selectbox("Ring number", ["none", "one", "two"])
 ring_type = st.sidebar.selectbox("Ring type", ["cobwebby", "evanescent", "flaring", "large", "none", "pendant", "sheathing", "zone"])
@@ -192,6 +192,16 @@ if stalk_color_below_ring == "pink": test_data["stalk-color-below-ring_p"] = 1
 if stalk_color_below_ring == "red": test_data["stalk-color-below-ring_e"] = 1
 if stalk_color_below_ring == "white": test_data["stalk-color-below-ring_w"] = 1
 if stalk_color_below_ring == "yellow": test_data["stalk-color-below-ring_y"] = 1
+
+# veil_type
+if veil_type == "partial": test_data["veil-type_p"] = 1
+
+# veil_color
+if veil_color == "brown": test_data["veil-color_n"] = 1
+if veil_color == "orange": test_data["veil-color_o"] = 1
+if veil_color == "white": test_data["veil-color_w"] = 1
+if veil_color == "yellow": test_data["veil-color_y"] = 1
+
 
 st.write(test_data)
 st.write(result[0])
