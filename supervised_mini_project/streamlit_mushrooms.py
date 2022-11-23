@@ -37,9 +37,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, rando
 model = LogisticRegression()
 model.fit(X_train, y_train)
 
-y_pred = model.predict(X_test)
-
-
 # %%
 ########################### STREAMLIT ########################################
 import streamlit as st
@@ -47,7 +44,8 @@ import streamlit as st
 def main():
     st.title("Mushroom Edibility Test")
     st.sidebar.title("Mushroom description")
-    st.image("mushroom.png")
+    st.image("supervised_mini_project/mushroom.png")
+
 main()
 
 # sidebar
@@ -80,7 +78,7 @@ result = [cap_shape, cap_surface, cap_color, bruises, odor, gill_attachment, gil
 test_data = pd.DataFrame(columns = new_data.columns, index = ["Test data"])
 test_data = test_data.fillna(0)
 
-# Filling the result
+#################### Filling the result ################################
 # cap_shape
 if cap_shape == "bell": test_data["cap-shape_b"] = 1
 if cap_shape == "conical": test_data["cap-shape_c"] = 1
@@ -242,8 +240,10 @@ if habitat == "urban": test_data["habitat_u"] = 1
 if habitat == "waste": test_data["habitat_w"] = 1
 if habitat == "woods": test_data["habitat_d"] = 1
 
+######################################################################
+
 # test botton
-if st.button("TEST!!"):
+if st.button("TEST!?"):
     prediction = model.predict(test_data.iloc[:, 1:])
     if prediction[0] == 1:
         st.write("Edible!!")
