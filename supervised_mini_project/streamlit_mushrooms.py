@@ -243,13 +243,17 @@ if habitat == "woods": test_data["habitat_d"] = 1
 ######################################################################
 
 # test botton
-if st.button("TEST!?"):
-    prediction = model.predict(test_data.iloc[:, 1:])
-    if prediction[0] == 1:
-        st.write("Edible!!")
-    else:
-        st.write("Poisonous!!")
+text = ""
 
+if st.button("TEST"):
+    prediction = model.predict(test_data.iloc[:, 1:])
+    
+    if prediction[0] == 1:
+        text += f'<span style = "color:black"><b>{"Edible!"}</b></span>'
+    else:
+        text += f'<span style = "color:purple"><b>{"Poisonous!!"}</b></span>'
+    
+st.write(text, unsafe_allow_html = True)
 
 
 

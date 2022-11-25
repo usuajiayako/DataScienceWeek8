@@ -19,11 +19,11 @@ text = ""
 text += f'<span style = "color:black">{"Help need level for "}{data.iloc[country,0]}{" is "}</span>'
 
 if data.iloc[country, -3] == 0:
-    text += f'<span style = "color:red">{"High"} </span>'
-if data.iloc[country, -3] == 1:
-    text += f'<span style = "color:green">{"Medium"} </span>'
-if data.iloc[country, -3] == 2:
-    text += f'<span style = "color:blue">{"Low"} </span>'
+    text += f'<span style = "color:red">{"High"}</span>'
+elif data.iloc[country, -3] == 1:
+    text += f'<span style = "color:green">{"Medium"}</span>'
+elif data.iloc[country, -3] == 2:
+    text += f'<span style = "color:blue">{"Low"}</span>'
 
 st.write(text, unsafe_allow_html = True)
 
